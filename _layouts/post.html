@@ -13,3 +13,9 @@ layout: default
   </div>
 
 </article>
+
+<div class="tags">
+  {% for tag in page.tags %}
+    <a class="tags__tag" href="">{{ tag }}</span>
+  {% endfor %}
+</div>

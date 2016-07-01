@@ -204,3 +204,16 @@ pre {
         }
     }
 }
+
+.tags {
+  .tags__tag {
+    padding: 4px 10px;
+    background: #666;
+    border-radius: 4px;
+    color: #eee;
+  }
+
+  .tags__tag + .tags__tag {
+    margin-left: 10px;
+  }
+}
