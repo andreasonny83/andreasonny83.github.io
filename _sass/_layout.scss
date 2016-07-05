@@ -11,16 +11,23 @@
 }
 
 .site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
+  font-size: 28px;
+    line-height: 46px;
     letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
+    text-align: center;
+    display: block;
+    font-weight: 600;
 
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+
+    img {
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
     }
 }
 
@@ -124,6 +131,11 @@
     float: left;
     margin-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
+}
+
+.footer-copy {
+    text-align: center;
+    color: $grey-color;
 }
 
 .footer-col-1 {
