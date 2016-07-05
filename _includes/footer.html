@@ -5,23 +5,38 @@
     <p class="footer-copy">&copy; Copyright 2016 andreasonny83</p>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
 
-          {% if site.twitter_username %}
+        <ul class="contact-list">
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            <a href="mailto:{{ site.email }}">
+              <span class="icon icon--github">
+                {% include icon-email.svg %}
+              </span>
+            </a>
           </li>
-          {% endif %}
+          <li>
+            <a href="https://github.com/andreasonny83">
+              <span class="icon icon--github">
+                {% include icon-github.svg %}
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/andreasonny83">
+              <span class="icon icon--twitter">
+                {% include icon-twitter.svg %}
+              </span>
+            </a>
+          </li>
         </ul>
-      </div>
+
     </div>
   </div>
+
+  <script src="{{ "/_include/responsive-navbar.js" | prepend: site.baseurl }}" charset="utf-8"></script>
+  <script type="text/javascript">
+    {% include responsive-navbar.js %}
+    ResponsiveNav.init();
+  </script>
 
 </footer>

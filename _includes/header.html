@@ -1,18 +1,8 @@
 <header class="site-header">
 
-  <div class="wrapper">
-
-    <nav class="site-nav">
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
-
-  </div>
+  <button class="js-menu-show header__menu-toggle material-icons">
+    menu
+  </button>
 
   <div class="wrapper">
     <a class="site-title" href="{{ site.baseurl }}/">
@@ -20,5 +10,36 @@
       {{ site.title }}
     </a>
   </div>
+
+  <aside class="js-responsive-nav responsive-nav">
+    <nav class="js-responsive-nav-container responsive-nav__container">
+      <header class="responsive-nav__header">
+        <h2 class="responsive-nav__header__title">
+          {{ site.title }}
+        </h2>
+      </header>
+
+      <div class="responsive-nav__content">
+        <a class="responsive-nav__content__link" href="{{ site.baseurl }}">
+          <i class="material-icons">home</i>Home{{ site.baseurl }}
+        </a>
+        <a class="responsive-nav__content__link"
+            href="{{ about | prepend: site.baseurl }}">
+          <i class="material-icons">account_circle</i>About
+        </a>
+
+        <div class="responsive-nav__content__separator"></div>
+
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+            <a class="responsive-nav__content__link"
+                href="{{ my_page.url | prepend: site.baseurl }}">
+              {{ my_page.title }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+  </aside>
 
 </header>

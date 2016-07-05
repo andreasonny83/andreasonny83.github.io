@@ -118,6 +118,36 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 12px;
+        margin: 0 5px;
+        background: #ccc;
+        border-radius: 50%;
+        transition: background .3s, box-shadow .3s;
+
+        &:hover,
+        &:focus {
+          background: $grey-color;
+          color: $grey-color-light;
+          box-shadow: 0 3px 8px rgba(0,0,0,.35);
+
+          .icon svg path {
+            fill: $grey-color-light;
+            transition: fill .3s;
+          }
+        }
+
+        .icon svg path {
+          fill: $white-color;
+        }
+      }
+    }
 }
 
 .footer-col-wrapper {
