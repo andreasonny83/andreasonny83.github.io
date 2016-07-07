@@ -20,23 +20,21 @@
       </header>
 
       <div class="responsive-nav__content">
-        <a class="responsive-nav__content__link" href="{{ site.baseurl }}">
-          <i class="material-icons">home</i>Home{{ site.baseurl }}
+        <a class="responsive-nav__content__link" href="/">
+          <i class="material-icons">home</i>Home
         </a>
         <a class="responsive-nav__content__link"
-            href="{{ about | prepend: site.baseurl }}">
+            href="{{ '/about' | prepend: site.baseurl }}">
           <i class="material-icons">account_circle</i>About
         </a>
 
         <div class="responsive-nav__content__separator"></div>
 
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-            <a class="responsive-nav__content__link"
-                href="{{ my_page.url | prepend: site.baseurl }}">
-              {{ my_page.title }}
-            </a>
-          {% endif %}
+        {% for post in site.posts limit: 10 %}
+          <a class="responsive-nav__content__link"
+              href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
         {% endfor %}
       </div>
     </nav>

@@ -3,8 +3,6 @@
  */
 .site-header {
     border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -116,38 +114,38 @@
 
 .contact-list,
 .social-media-list {
-    list-style: none;
-    margin-left: 0;
-    text-align: center;
+  list-style: none;
+  margin-left: 0;
+  text-align: center;
 
-    li {
-      display: inline-block;
+  li {
+    display: inline-block;
+    margin: 5px;
 
-      a {
-        display: block;
-        padding: 12px;
-        margin: 0 5px;
-        background: #ccc;
-        border-radius: 50%;
-        transition: background .3s, box-shadow .3s;
+    a {
+      display: block;
+      padding: 12px;
+      background: #ccc;
+      border-radius: 50%;
+      transition: background .3s, box-shadow .3s;
 
-        &:hover,
-        &:focus {
-          background: $grey-color;
-          color: $grey-color-light;
-          box-shadow: 0 3px 8px rgba(0,0,0,.35);
-
-          .icon svg path {
-            fill: $grey-color-light;
-            transition: fill .3s;
-          }
-        }
+      &:hover,
+      &:focus {
+        background: $grey-color;
+        color: $grey-color-light;
+        box-shadow: 0 3px 8px rgba(0,0,0,.35);
 
         .icon svg path {
-          fill: $white-color;
+          fill: $grey-color-light;
+          transition: fill .3s;
         }
       }
+
+      .icon svg path {
+        fill: $white-color;
+      }
     }
+  }
 }
 
 .footer-col-wrapper {

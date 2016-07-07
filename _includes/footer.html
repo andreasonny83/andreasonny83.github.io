@@ -33,10 +33,10 @@
     </div>
   </div>
 
-  <script src="{{ "/_include/responsive-navbar.js" | prepend: site.baseurl }}" charset="utf-8"></script>
-  <script type="text/javascript">
-    {% include responsive-navbar.js %}
-    ResponsiveNav.init();
-  </script>
-
 </footer>
+
+{% if site.custom_js %}
+  {% for js_file in site.custom_js %}
+  <script src="/scripts/{{ js_file }}.js" type="text/javascript"></script>
+  {% endfor %}
+{% endif %}
