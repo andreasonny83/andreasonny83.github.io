@@ -4,6 +4,7 @@ permalink: /feature-flags
 title:  Feature flags
 categories: javascript
 tags: javascript chrome
+comments : true
 ---
 
 How many of you have ever wanted to have "secret" features released into their
