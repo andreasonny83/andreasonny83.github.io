@@ -13,3 +13,20 @@ custom_js:
 
 # Build settings
 markdown: kramdown
+
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use.
+# Set 'provider' to false to turn commenting off globally.
+comments :
+  provider : disqus
+  disqus :
+    short_name : andreasonny83
+  livefyre :
+    site_id : 123
+  intensedebate :
+    account : 123abc
+  facebook :
+    appid : 123
+    num_posts: 5
+    width: 580
+    colorscheme: light
