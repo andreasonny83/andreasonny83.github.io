@@ -1,5 +1,5 @@
 # Site settings
-title: '@andreasonny83'
+title: "@andreasonny83"
 email: andreasonny83@gmail.com
 username: andreasonny83
 description: > # this means to ignore newlines until "baseurl:"
@@ -17,16 +17,7 @@ markdown: kramdown
 # Settings for comments helper
 # Set 'provider' to the comment provider you want to use.
 # Set 'provider' to false to turn commenting off globally.
-comments :
-  provider : disqus
-  disqus :
-    short_name : andreasonny83
-  livefyre :
-    site_id : 123
-  intensedebate :
-    account : 123abc
-  facebook :
-    appid : 123
-    num_posts: 5
-    width: 580
-    colorscheme: light
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "andreasonny83"
