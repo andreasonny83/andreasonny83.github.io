@@ -201,7 +201,6 @@ alongside the installation process:
 ```js
 var urlsToCache = [
   '/',
-  '/index.html',
   '/styles/main.css',
   '/scripts/app.js',
   '/images/background.png'
@@ -217,7 +216,7 @@ self.addEventListener('install', function(event) {
       .open('myCache')
       .then(function(cache) {
         return cache.addAll(urlsToCache);
-      });
+      })
   );
 });
 ```
